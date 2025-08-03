@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>💀 HACKED 💀</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      background: black;
+      color: #00ff00;
+      font-family: monospace;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      font-size: 2.2em;
+      animation: flicker 0.15s infinite alternate;
+    }
+    .warn {
+      color: red;
+      font-size: 1.3em;
+      animation: blink 0.4s infinite;
+    }
+    #count {
+      color: yellow;
+      font-size: 1.8em;
+      margin-top: 20px;
+    }
+    a {
+      color: cyan;
+      font-size: 1.2em;
+      display: block;
+      margin-top: 20px;
+    }
+    @keyframes flicker {
+      from { opacity: 1; }
+      to { opacity: 0.5; }
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h1>💀 YOU'VE BEEN HACKED 💀</h1>
+  <div class="warn">Accessing front camera...</div>
+  <div id="count">System wipe in 10</div>
+  <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">🛑 Fix this now</a>
+  <audio autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-14.mp3" type="audio/mpeg">
+  </audio>
+  <script>
+    let s = 10;
+    const c = document.getElementById("count");
+    const scary = () => {
+      alert("⚠️ SYSTEM FILES DELETED");
+      alert("📂 ALL DATA LOST");
+      document.body.innerHTML = "<h1 style='color:red;font-size:2em;'>💥 YOU ARE TOO LATE 💥</h1><p style='color:yellow;'>This device has been terminated.</p>";
+    };
+    const tick = () => {
+      s--;
+      if (s > 0) {
+        c.textContent = "System wipe in " + s;
+      } else {
+        clearInterval(t);
+        c.textContent = "💥 SYSTEM FAILURE 💥";
+        scary();
+      }
+    };
+    const t = setInterval(tick, 1000);
+  </script>
+</body>
+</html>
